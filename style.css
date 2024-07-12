@@ -35,14 +35,14 @@ body {
     font-family: sans-serif;
 }
 
-.controls {
+#controls {
     display: flex;
     gap: 4rem;
 
     margin-top: 4.5rem;
 }
 
-.controls button {
+#controls button {
     font-size: 6.4rem;
 
     border: none;
@@ -68,4 +68,11 @@ body {
     justify-content: center;
 
     margin-bottom: 3.2rem;
+}
+
+
+/* controls */ 
+.running .ph-play-circle,
+html:not(.running) .ph-pause-circle{
+    display: none;
 }

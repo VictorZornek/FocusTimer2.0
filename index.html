@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" class="">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,24 +7,29 @@
 
     <link rel="stylesheet" href="style.css">
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <script type="module" src="./src/main.js" defer></script>
 </head>
 <body>
     <div class="app">
         <section class="timer-controls">
             <section class="timer">
-                <span class="minutes">00</span>
+                <span id="minutes">00</span>
                 <span>:</span>
-                <span class="seconds">00</span>
+                <span id="seconds">00</span>
             </section>
 
-            <section class="controls">
-                <button class="ph ph-play-circle"></button>
+            <section id="controls">
+                <button 
+                    class="ph ph-play-circle" data-action="toggleRunning"></button>
 
-                <button class="ph ph-stop-circle"></button>
+                <button class="ph ph-pause-circle" data-action="toggleRunning"></button>
 
-                <button class="ph ph-plus-circle"></button>
+                <button class="ph ph-stop-circle" data-action="reset"></button>
 
-                <button class="ph ph-minus-circle"></button>
+                <button class="ph ph-plus-circle" data-action="addMinutes"></button>
+
+                <button class="ph ph-minus-circle" data-action="toggleRunning"></button>
             </section>
 
         </section>
