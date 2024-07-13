@@ -6,10 +6,18 @@ export const minutes = document.getElementById('minutes')
 
 export const seconds = document.getElementById('seconds')
 
-export const treeButton = document.querySelector('.tree')
+export const treeButton = document.getElementById('tree')
 
-export const rainButton = document.querySelector('.rain')
+export const rainButton = document.getElementById('rain')
 
-export const tentButton = document.querySelector('.tent')
+export const tentButton = document.getElementById('tent')
 
-export const fireButton = document.querySelector('.fire')
+export const fireButton = document.getElementById('fire')
+
+
+
+export function resetClassButtons(firstButton, firstButtonClass, secondButton, secondButtonClass, thirdButton, thirdButtonClass) {
+    firstButton.classList.remove(firstButtonClass)
+    secondButton.classList.remove(secondButtonClass)
+    thirdButton.classList.remove(thirdButtonClass)
+}

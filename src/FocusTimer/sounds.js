@@ -1,18 +1,27 @@
 import * as elements from './elements.js'
 
+const treeButton = elements.treeButton
+const rainButton = elements.rainButton
+const tentButton = elements.tentButton
+const fireButton = elements.fireButton
 
 export function treeSound() {
-    console.log('Ativar música do tree card')
+    elements.treeButton.classList.toggle('treeSoundActivated')
+    elements.resetClassButtons(rainButton, 'rainSoundActivated', tentButton, 'tentSoundActivated', fireButton, 'fireSoundActivated')
 }
 
 export function rainSound() {
-    console.log('Ativar música do rain card')
+    elements.rainButton.classList.toggle('rainSoundActivated')
+    elements.resetClassButtons(treeButton, 'treeSoundActivated', tentButton, 'tentSoundActivated', fireButton, 'fireSoundActivated')
 }
 
 export function tentSound() {
-    console.log('Ativar música do tent card')
+    elements.tentButton.classList.toggle('tentSoundActivated')
+    elements.resetClassButtons(treeButton, 'treeSoundActivated', rainButton, 'rainSoundActivated', fireButton, 'fireSoundActivated')
 }
 
 export function fireSound() {
-    console.log('Ativar música do fire card')
+    elements.fireButton.classList.toggle('fireSoundActivated')
+    elements.resetClassButtons(treeButton, 'treeSoundActivated', rainButton, 'rainSoundActivated', tentButton, 'tentSoundActivated')
 }
+

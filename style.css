@@ -11,7 +11,7 @@
     --bg-card-rain: hsl(194, 97%, 31%);
     --bg-card-fire: hsl(2, 90%, 47%);
     --bg-card-tree: hsl(120, 97%, 23%);
-    --bg-card-tent: hsl(19, 99%, 28%);
+    --bg-card-tent: hsl(34, 98%, 22%);
 
     font-size: clamp(40%, 1% + 2vw, 62.5%);
 }
@@ -57,9 +57,27 @@ body {
     border: none;
     border-radius: 2.4rem;
 
-    background-color: var(--bg-card);
-
     cursor: pointer;
+}
+
+.buttonSound {
+    background: var(--bg-card);
+}
+
+.treeSoundActivated {
+    background: var(--bg-card-tree);
+}
+
+.rainSoundActivated {
+    background: var(--bg-card-rain);
+}
+
+.tentSoundActivated {
+    background: var(--bg-card-tent);
+}
+
+.fireSoundActivated {
+    background: var(--bg-card-fire);
 }
 
 .card-wrapper {
@@ -80,3 +98,6 @@ html:not(.running) .ph-pause-circle{
 
 /* sounds activated */
 
+.treeActivated {
+    background-color: var(--bg-card-tree);
+}

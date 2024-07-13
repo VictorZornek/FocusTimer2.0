@@ -1,4 +1,3 @@
-import * as elements from "./elements.js"
 import state from "./state.js"
 import { countdown, updateDisplay } from "./timer.js"
 
