@@ -1,32 +1,42 @@
 import * as elements from "./elements.js"
 import state from "./state.js"
+import { countdown, updateDisplay } from "./timer.js"
 
 export function toggleRunning() {
-    console.log('estamos no togglerunning')
-    document.documentElement.classList.toggle('running')
+    state.isRunning = document.documentElement.classList.toggle('running')
+
+    countdown()
 }
 
 export function reset() {
-    state.minutes = 10
+    state.isRunning = false
     document.documentElement.classList.remove('running')
     
-    console.log(state.minutes)
+    state.minutes = 10
+    state.seconds = 0
+    
+    updateDisplay(10, 0)
 }
 
 export function addMinutes() { // add 5 min no timer
-    if(state.minutes > 90) {
+    
+    if(state.minutes > 55) {
         return
     }
     
     state.minutes += 5
-    console.log(state.minutes)
+
+    updateDisplay(state.minutes, state.seconds)
 }
 
 export function subMinutes() {  // sub 5 min no timer
-    if(state.minutes < 0) {
+    
+    if(state.minutes < 5) {
         return
     }
-
+    
     state.minutes -= 5
-    console.log(state.minutes)
+
+    updateDisplay(state.minutes, state.seconds)
 }
+
