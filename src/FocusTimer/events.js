@@ -1,6 +1,5 @@
 import { sounds, controls } from './elements.js'
 import * as actions from './actions.js'
-import * as soundsMusic from './sounds.js'
 
 
 export function registerControls() {
@@ -22,6 +21,6 @@ export function registerSounds() {
             return
         }
         
-        soundsMusic[sound]()
+        actions[sound]()
     })
 }

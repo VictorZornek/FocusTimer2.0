@@ -7,7 +7,7 @@
 :root {
     --bg-color: hsl(0, 0%, 100%);
     --text-color: hsl(240, 6%, 21%);
-    --bg-card: hsl(240, 9%, 89%);
+    --bg-card: hsl(0, 0%, 46%);
     --bg-card-rain: hsl(194, 97%, 31%);
     --bg-card-fire: hsl(2, 90%, 47%);
     --bg-card-tree: hsl(120, 97%, 23%);
@@ -62,7 +62,18 @@ body {
 
 .buttonSound {
     background: var(--bg-card);
+    
 }
+
+.card-wrapper {
+    display: flex;
+    gap: 3.2rem;
+    justify-content: center;
+
+    margin-bottom: 3.2rem;
+}
+
+/* sounds activated */
 
 .treeSoundActivated {
     background: var(--bg-card-tree);
@@ -80,15 +91,6 @@ body {
     background: var(--bg-card-fire);
 }
 
-.card-wrapper {
-    display: flex;
-    gap: 3.2rem;
-    justify-content: center;
-
-    margin-bottom: 3.2rem;
-}
-
-
 /* controls */ 
 .running .ph-play-circle,
 html:not(.running) .ph-pause-circle{
@@ -96,8 +98,4 @@ html:not(.running) .ph-pause-circle{
 }
 
 
-/* sounds activated */
 
-.treeActivated {
-    background-color: var(--bg-card-tree);
-}

@@ -21,3 +21,10 @@ export function resetClassButtons(firstButton, firstButtonClass, secondButton, s
     secondButton.classList.remove(secondButtonClass)
     thirdButton.classList.remove(thirdButtonClass)
 }
+
+export function resetAllClassButtons(firstButton, firstButtonClass, secondButton, secondButtonClass, thirdButton, thirdButtonClass, forthButton, forthButtonClass) {
+    firstButton.classList.remove(firstButtonClass)
+    secondButton.classList.remove(secondButtonClass)
+    thirdButton.classList.remove(thirdButtonClass)
+    forthButton.classList.remove(forthButtonClass)
+}
